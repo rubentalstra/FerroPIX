@@ -1,0 +1,27 @@
+/* SPDX-FileCopyrightText: Ruben Talstra */
+/* SPDX-License-Identifier: BUSL-1.1 */
+/* FerroPIX brand tokens, the "Plum & Iron" palette. Import this file, or
+   copy the values. The family site copies the two hue values verbatim into
+   its own tokens.css, so a change here is a change there. */
+:root {
+  /* Core palette */
+  --ferropix-plum: #6B21A8;        /* primary mark and accents; text on light */
+  --ferropix-plum-light: #C084FC;  /* the same voice on a dark ground; highlights in the mark */
+  --ferropix-ink: #0F172A;          /* text on light */
+  --ferropix-mist: #F1F5F9;         /* text on dark */
+  --ferropix-tile: #0B1020;         /* dark tile background */
+  --ferropix-surface: #F8FAFC;      /* light surface background */
+
+  /* Roles */
+  --ferropix-brand: var(--ferropix-plum);
+  --ferropix-brand-2: var(--ferropix-plum-light);
+  --ferropix-fg: var(--ferropix-ink);
+  --ferropix-bg: var(--ferropix-surface);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ferropix-brand: var(--ferropix-plum-light);
+    --ferropix-fg: var(--ferropix-mist);
+    --ferropix-bg: var(--ferropix-tile);
+  }
+}
